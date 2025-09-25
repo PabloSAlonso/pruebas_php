@@ -170,17 +170,32 @@ fibonacci();
 echo "<br>";
 
 //11
-function tabla()
-{
-    for ($i = 1; $i <= 10; $i++) {
-        for ($j = 1; $j <= 10; $j++) {
-            echo $i * $j;
-        }
-        echo "<br>";
+function pintarTabla($filas, $columnas) {
+    echo "<table border='1' cellspacing='0' cellpadding='5' style='border-collapse: collapse; text-align: center;'>";
+
+    // Fila de cabecera
+    echo "<tr>";
+    echo "<th></th>"; // Celda vacía en la esquina superior izquierda
+    for ($j = 1; $j <= $columnas; $j++) {
+        echo "<th>$j</th>"; // Cabecera superior en negrita
     }
+    echo "</tr>";
+
+    // Filas de la tabla
+    for ($i = 1; $i <= $filas; $i++) {
+        echo "<tr>";
+        echo "<th>$i</th>"; // Cabecera lateral en negrita
+        for ($j = 1; $j <= $columnas; $j++) {
+            echo "<td>" . ($i * $j) . "</td>"; // Celdas normales
+        }
+        echo "</tr>";
+    }
+
+    echo "</table>";
 }
-echo "Funcion 11"."<br>";
-tabla();
+
+// Ejemplo de uso
+pintarTabla(10, 10);
 echo "<br>";
 
 //12
