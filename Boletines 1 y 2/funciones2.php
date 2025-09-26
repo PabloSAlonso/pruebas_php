@@ -21,11 +21,12 @@ function contar($frase, $letra)
 }
 
 echo "Funcion 2" . "<br>";
-contar("holaa", 'a');
+echo contar("holaa", 'a');
 echo "<br>";
 
 function validarContraseña($contraseña)
 {
+    echo "Contraseña:".$contraseña."\n -> ";
     $longitud = strlen($contraseña);
 
     // Validar longitud
@@ -67,30 +68,29 @@ echo "<br>";
 function meses()
 {
     $meses = array(
-        'enero',
-        'febrero',
-        'marzo',
-        'abril',
-        'mayo',
-        'junio',
-        'julio',
-        'agosto',
-        'septiembre',
-        'octubre',
-        'noviemnbre',
-        'diciembre'
+        "enero",
+        "febrero",
+        "marzo",
+        "abril",
+        "mayo",
+        "junio",
+        "julio",
+        "agosto",
+        "septiembre",
+        "octubre",
+        "noviemnbre",
+        "diciembre"
     );
 
     $meses_m = array(); //TODO probar
-    $i = 0;
     foreach ($meses as $mes) {
         if (strtolower($mes[0]) === 'm') {
-            $meses_m[$i] = $mes;
-            $i++;
+            $meses_m[] = $mes;
+
         }
     }
 
-    echo ($meses_m);
+    print_r($meses_m);
 }
 
 echo "Funcion 5" . "<br>";
@@ -106,7 +106,7 @@ function quitaAzul()
             unset($colores[$i]);
         }
     }
-    echo $colores;
+    print_r($colores);
 }
 
 
