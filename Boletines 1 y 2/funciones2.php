@@ -106,7 +106,8 @@ function quitaAzul()
             unset($colores[$i]);
         }
     }
-    print_r($colores);
+    $array_nuevo = array_values($colores);
+    print_r($array_nuevo);
 }
 
 
