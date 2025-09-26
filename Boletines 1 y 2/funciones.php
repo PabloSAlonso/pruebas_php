@@ -209,5 +209,5 @@ function factorial($num) {
     return $resultado;
 }
 echo "Funcion 12"."<br>";
-echo factorial(5);
+echo factorial(8);
 echo "<br>";
