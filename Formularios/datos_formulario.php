@@ -21,21 +21,21 @@
 
     if ($_SERVER['REQUEST_METHOD'] == "POST") {
 
-        if (!isset($_POST['nombre']) || empty($_SERVER['nombre'])) {
+        if (!isset($_POST['nombre']) || empty($_POST['nombre'])) {
             echo "<span style=\"color:red;\">El campo nombre es obligatorio</span><br>";
             $isChecked = false;
         } else {
             $nombre = filter_var($_POST['nombre'], FILTER_SANITIZE_FULL_SPECIAL_CHARS);
         }
 
-        if (!isset($_POST['apellidos']) || empty($_SERVER['apellidos'])) {
+        if (!isset($_POST['apellidos']) || empty($_POST['apellidos'])) {
             echo "<span style=\"color:red;\">El campo apellidos es obligatorio</span><br>";
             $isChecked = false;
         } else {
             $nombre = filter_var($_POST['apellidos'], FILTER_SANITIZE_FULL_SPECIAL_CHARS);
         }
 
-        if (!isset($_POST['email']) || empty($_SERVER['email'])) {
+        if (!isset($_POST['email']) || empty($_POST['email'])) {
             echo "<span style=\"color:red;\">El campo email no puede estar vacio</span><br>";
             $isChecked = false;
         } else {
@@ -63,18 +63,82 @@
         } else {
             $estudios = filter_var($_POST['genero'], FILTER_SANITIZE_FULL_SPECIAL_CHARS);
         }
+
+        $idiomas = $_POST['idiomas'];
+
+        if (!isset($_POST['info']) || empty($_POST['info'])) {
+            echo "<span style=\"color:red;\">El campo info es obligatorio</span><br>";
+            $isChecked = false;
+        } else {
+            $estudios = filter_var($_POST['info'], FILTER_SANITIZE_FULL_SPECIAL_CHARS);
+        }
     }
 
-
-
-
-    if (!$isChecked) {
-    }
     ?>
 </head>
 
 <body>
+    <?php
+    if ($isChecked) {
+        echo "<h1 class = \"display-5\"> Datos introducidos en la inscripcion</h1>";
+        if ($genero == "hombre") {
+    ?>
+            <ol class="list-group list-group-numbered">
+                <li class="list-group-item d-flex justify-content-between align-items-start">
+                    <div class="ms-2 me-auto">
+                        <div class="fw-bold">Nombre y Apellidos</div>
+                    </div>
+                </li>
+            </ol>
+        <?php
+            echo "Bienvenido señor $nombre $apellidos";
+        } else if ($genero == "mujer") {
+        ?>
+            <ol class="list-group list-group-numbered">
+                <li class="list-group-item d-flex justify-content-between align-items-start">
+                    <div class="ms-2 me-auto">
+                        <div class="fw-bold">Nombre y Apellidos</div>
+                    </div>
+                </li>
+            </ol>
+        <?php
+            echo "Bienvenido señora $nombre $apellidos";
+        }
+        ?>
 
+        </li>
+        <li class="list-group-item d-flex justify-content-between align-items-start">
+            <div class="ms-2 me-auto">
+                <div class="fw-bold">Estado</div>
+                <?php echo $estado ?>
+            </div>
+
+        </li>
+        <li class="list-group-item d-flex justify-content-between align-items-start">
+            <div class="ms-2 me-auto">
+                <div class="fw-bold">Estudios</div>
+                <?php echo $estudios ?>
+            </div>
+
+        </li>
+        <li class="list-group-item d-flex justify-content-between align-items-start">
+            <div class="ms-2 me-auto">
+                <div class="fw-bold">Idiomas</div>
+                <?php echo $idiomas ?>
+            </div>
+
+        </li>
+        <li class="list-group-item d-flex justify-content-between align-items-start">
+            <div class="ms-2 me-auto">
+                <div class="fw-bold">Informacion relevante</div>
+                <?php echo $info ?>
+            </div>
+
+        </li>
+        </ol>
+    <?php
+    }
+    ?>
 
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>

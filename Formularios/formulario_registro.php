@@ -32,7 +32,7 @@
         </div>
         <div class="col-md-6">
             <label for="inputPassword4" class="form-label">Apellidos</label>
-            <input type="password" class="form-control" id="inputPassword4" name="apellidos">
+            <input type="text" class="form-control" id="inputPassword4" name="apellidos">
         </div>
         <div class="col-12">
             <label for="inputAddress" class="form-label">Email</label>
@@ -52,7 +52,7 @@
 
         <div class="col-md-4">
             <label for="inputState" class="form-label">Estado civil</label>
-            <select id="inputState" class="form-select" name="estadoCivil">
+            <select id="inputState" class="form-select" name="estado">
                 <option selected value="soltero/a">Soltero/a</option>
                 <option value="casado/a">Casado/a</option>
                 <option value="divorciado/a">Divorciado/a</option>
@@ -75,22 +75,22 @@
         </div>
 
         <div class="form-check form-switch">
-            <input class="form-check-input" type="checkbox" id="flexSwitchCheckDefault" name="idiomas[]">
+            <input class="form-check-input" type="checkbox" id="flexSwitchCheckDefault" name="idiomas[]" value="Ingles">
             <label class="form-check-label" for="flexSwitchCheckDefault">Ingles</label>
         </div>
 
         <div class="form-check form-switch">
-            <input class="form-check-input" type="checkbox" id="flexSwitchCheckDefault" name="idiomas[]">
+            <input class="form-check-input" type="checkbox" id="flexSwitchCheckDefault" name="idiomas[]" value="Aleman">
             <label class="form-check-label" for="flexSwitchCheckDefault">Aleman</label>
         </div>
 
         <div class="form-check form-switch">
-            <input class="form-check-input" type="checkbox" id="flexSwitchCheckDefault" name="idiomas[]">
+            <input class="form-check-input" type="checkbox" id="flexSwitchCheckDefault" name="idiomas[]" value="Frances">
             <label class="form-check-label" for="flexSwitchCheckDefault">Frances</label>
         </div>
 
         <div class="form-check form-switch">
-            <input class="form-check-input" type="checkbox" id="flexSwitchCheckDefault" name="idiomas[]">
+            <input class="form-check-input" type="checkbox" id="flexSwitchCheckDefault" name="idiomas[]" value="Español" checked>
             <label class="form-check-label" for="flexSwitchCheckDefault">Español</label>
         </div>
 
