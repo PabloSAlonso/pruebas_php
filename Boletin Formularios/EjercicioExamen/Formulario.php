@@ -39,26 +39,26 @@
             <input type="text" name="correo">
         </div>
         <div id="info">
-            <input type="radio" name="interes" checked>
+            <input type="radio" name="interes" value="si" checked>
             <label for="interes">Si, me interesa</label>
             <br>
-            <input type="radio" name="interes">
+            <input type="radio" name="interes" value="no">
             <label for="interes">No, gracias</label>
         </div>
         <div id="checks">
-            <input type="checkbox" name="national" id="revista" checked>
+            <input type="checkbox" name="national" checked>
             <label for="national">National Geographic</label>
             <br>
-            <input type="checkbox" name="electronic" id="revista">
+            <input type="checkbox" name="electronic" >
             <label for="electronic">Electronic Letters</label>
             <br>
-            <input type="checkbox" name="conocer" id="revista">
+            <input type="checkbox" name="conocer" >
             <label for="conocer">Conocer</label>
             <br>
-            <input type="checkbox" name="science" id="revista">
+            <input type="checkbox" name="science" >
             <label for="science">Science</label>
             <br>
-            <input type="checkbox" name="desarrollo" id="revista">
+            <input type="checkbox" name="desarrollo" >
             <label for="desarrollo">Desarrollo Web</label>
 
         </div>
