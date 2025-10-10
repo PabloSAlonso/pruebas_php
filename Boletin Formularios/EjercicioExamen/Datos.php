@@ -87,7 +87,11 @@
             echo "<p>Nombre: $nombre</p>";
             echo "<p>Primer Apellido: $apellido1</p>";
             echo "<p>Segundo Apellido: $apellido2</p>";
-            echo "<p>Le enviaremos información relacionada con nuestras publicaciones al correo <b>$correo</b></p>";
+            if ($interes == 'si'){
+                echo "<p>Le enviaremos información relacionada con nuestras publicaciones al correo <b>$correo</b></p>";
+            } else {
+                echo "<p>No le enviaremos información relacionada con nuestras publicaciones al correo <b>$correo</b></p>";
+            }
         }
         ?>
     </div>
@@ -135,11 +139,11 @@
                 $numRevistas = count($revistasSeleccionadas);
 
                 if ($numRevistas == 1) {
-                    $tarifas = ['semanal' => 25, 'mensual' => 70, 'anual' => 550];
+                    $tarifas = ['semanal' => 4, 'mensual' => 7, 'anual' => 80];
                 } elseif ($numRevistas == 2) {
-                    $tarifas = ['semanal' => 35, 'mensual' => 90, 'anual' => 650];
+                    $tarifas = ['semanal' => 7, 'mensual' => 10, 'anual' => 110];
                 } else {
-                    $tarifas = ['semanal' => 50, 'mensual' => 120, 'anual' => 800];
+                    $tarifas = ['semanal' => 10, 'mensual' => 15, 'anual' => 150];
                 }
 
                 $tarifa = isset($tarifas[$suscripcion]) ? $tarifas[$suscripcion] : 0;
