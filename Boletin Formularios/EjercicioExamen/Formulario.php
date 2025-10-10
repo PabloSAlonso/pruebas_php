@@ -40,10 +40,8 @@
         </div>
         <div id="info">
             <input type="radio" name="interes" value="si" checked>
-            <input type="radio" name="interes" value="si" checked>
             <label for="interes">Si, me interesa</label>
             <br>
-            <input type="radio" name="interes" value="no">
             <input type="radio" name="interes" value="no">
             <label for="interes">No, gracias</label>
         </div>
@@ -52,18 +50,14 @@
             <label for="national">National Geographic</label>
             <br>
             <input type="checkbox" name="electronic" >
-            <input type="checkbox" name="electronic" >
             <label for="electronic">Electronic Letters</label>
             <br>
-            <input type="checkbox" name="conocer" >
             <input type="checkbox" name="conocer" >
             <label for="conocer">Conocer</label>
             <br>
             <input type="checkbox" name="science" >
-            <input type="checkbox" name="science" >
             <label for="science">Science</label>
             <br>
-            <input type="checkbox" name="desarrollo" >
             <input type="checkbox" name="desarrollo" >
             <label for="desarrollo">Desarrollo Web</label>
 
@@ -76,7 +70,8 @@
                 <option value="anual">Anual</option>
             </select>
         </div>
-
+        <br>
+        <button type="submit">Enviar Datos</button>
     </form>
 </body>
 
