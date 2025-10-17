@@ -1,6 +1,6 @@
 <?php
 
-class ppp {
+class Libro {
 
     private $autor;
     private $titulo;
@@ -78,7 +78,7 @@ class ppp {
 
 
 
-$libro1 = new ppp('Mila', 'Vais a suspender', 100, '',0);
+$libro1 = new Libro('Mila', 'Vais a suspender', 100, '',0);
 
 print $libro1->getAutor();
 print $libro1->getTitulo();
@@ -89,7 +89,7 @@ $libro1->setPrestado();
 $libro1->printLibro();
 
 
-$libro2 = new ppp('Javi', 'Viendo la luz', 150, '',0);
+$libro2 = new Libro('Javi', 'Viendo la luz', 150, '',0);
 $libro2->printLibro();
 
-print 'El número de libros que hay es '. ppp::$numLibros;
+print 'El número de libros que hay es '. Libro::$numLibros;
