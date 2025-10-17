@@ -1,15 +1,15 @@
 <?php
 
 interface Almacen{
-    public function calcularPrecioTodos();
+    public function calcularPrecioTodos($matriz);
 
-    public function calcularPrecioFila();
+    public function calcularPrecioFila($matriz);
 
-    public function calcularPrecioEstanteria();
+    public function calcularPrecioEstanteria($matriz);
 
-    public function agregarProducto();
+    public function agregarProducto($matriz);
 
-    public function eliminarProducto();
+    public function eliminarProducto($matriz);
 
-    public function mostrarInfo();
+    public function mostrarInfo($matriz);
 }

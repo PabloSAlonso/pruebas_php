@@ -13,5 +13,20 @@ class Refresco extends Bebida{
         $this -> promocion =  $promocion;
     }
 
+    public function getAzucar(){
+        return $this->azucar;
+    }
+
+    public function getPromocion(){
+        return $this->promocion;
+    }
+
+    public function setAzucar($azucar){
+        $this -> azucar = $azucar;
+    }
+
+    public function setPromocion($promocion){
+        $this -> promocion = $promocion;
+    }
     
 }
