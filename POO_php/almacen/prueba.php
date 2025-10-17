@@ -10,7 +10,6 @@ class Prueba implements Almacen {
         $acu = 0;
         for ($i = 0; $i < ob_get_length($matriz); $i++){
             // if (instanceof($matriz[$i]) == )
-            
             // $acu += getPrecio($matriz[$i]);
         }
     }
