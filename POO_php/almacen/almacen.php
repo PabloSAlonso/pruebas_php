@@ -11,7 +11,7 @@ class Almacen {
     }
 
     public function agregarProducto($bebida) {
-        // Evitar ID repetido
+
         foreach ($this->estanterias as $fila) {
             foreach ($fila as $item) {
                 if ($item !== null && $item->getId() == $bebida->getId()) {
@@ -21,7 +21,7 @@ class Almacen {
             }
         }
 
-        // Insertar en la primera posición libre
+
         for ($i = 0; $i < $this->filas; $i++) {
             for ($j = 0; $j < $this->columnas; $j++) {
                 if ($this->estanterias[$i][$j] === null) {
