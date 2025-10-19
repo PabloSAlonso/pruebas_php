@@ -1,36 +1,31 @@
 <?php
-// is_object($var); devuelve true si es un objeto
-// get_class($var); devuelve la clase de la variable
-// if($var instance_of(objeto_comparar)) Devuelve true si la variable tiene alguna instancia del objeto a comparar
+require_once "AguaMineral.php";
+require_once "BebidaAzucarada.php";
+require_once "Almacen.php";
 
-class Prueba implements Almacen {
-    private $matriz = [4][4];
+$almacen = new Almacen(2, 3);
 
-    public function calcularPrecioTodos($matriz){
-        $acu = 0;
-        for ($i = 0; $i < ob_get_length($matriz); $i++){
-            // if (instanceof($matriz[$i]) == )
-            // $acu += getPrecio($matriz[$i]);
-        }
-    }
+$agua1 = new Agua(1, 1.5, 1.00, "Font Vella", "Manantial del Pirineo");
+$agua2 = new Agua(2, 2.0, 1.50, "Lanjarón", "Sierra Nevada");
 
-    public function calcularPrecioFila($matriz){
+$cola = new Refresco(3, 1.5, 2.00, "Coca-Cola", 12, true);
+$fanta = new Refresco(4, 2.0, 2.20, "Fanta", 10, false);
+$colaZero = new Refresco(5, 1.5, 2.00, "Coca-Cola", 0, false);
 
-    }
+$almacen->agregarProducto($agua1);
+$almacen->agregarProducto($agua2);
+$almacen->agregarProducto($cola);
+$almacen->agregarProducto($fanta);
+$almacen->agregarProducto($colaZero);
 
-    public function calcularPrecioEstanteria($matriz){
+$almacen->mostrarInformacion();
 
-    }
+echo "<hr><b>Precio total del almacén:</b> " . $almacen->calcularPrecioTotal() . " €<br>";
+echo "<b>Precio total de Coca-Cola:</b> " . $almacen->calcularPrecioMarca("Coca-Cola") . " €<br>";
+echo "<b>Precio total de estantería 0:</b> " . $almacen->calcularPrecioEstanteria(0) . " €<br>";
 
-    public function agregarProducto($matriz){
+$almacen->eliminarProducto(3);
 
-    }
-
-    public function eliminarProducto($matriz){
-
-    }
-
-    public function mostrarInfo($matriz){
-
-    }
-}
+echo "<hr><b>📊 Después de eliminar la Coca-Cola:</b><br>";
+$almacen->mostrarInformacion();
+?>
