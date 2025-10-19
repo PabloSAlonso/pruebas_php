@@ -14,18 +14,20 @@ $colaZero = new Refresco(5, 1.5, 2.00, "Coca-Cola", 0, false);
 
 $almacen->agregarProducto($agua1);
 $almacen->agregarProducto($agua2);
-$almacen->agregarProducto($cola);
+$almacen->agregarProducto($cola); // metemos bebidas 
 $almacen->agregarProducto($fanta);
 $almacen->agregarProducto($colaZero);
 
-$almacen->mostrarInformacion();
+$almacen->mostrarInformacion(); //enseñamos todo
+$almacen->mostrarMatriz();
 
 echo "<hr><b>Precio total del almacén:</b> " . $almacen->calcularPrecioTotal() . " €<br>";
 echo "<b>Precio total de Coca-Cola:</b> " . $almacen->calcularPrecioMarca("Coca-Cola") . " €<br>";
 echo "<b>Precio total de estantería 0:</b> " . $almacen->calcularPrecioEstanteria(0) . " €<br>";
 
-$almacen->eliminarProducto(3);
+$almacen->eliminarProducto(3); // un cambio
 
-echo "<hr><b>📊 Después de eliminar la Coca-Cola:</b><br>";
+echo "<hr><b>📊 Después de eliminar la Coca-Cola:</b><br>"; //volvemos a enseñar
 $almacen->mostrarInformacion();
+$almacen->mostrarMatriz();
 ?>

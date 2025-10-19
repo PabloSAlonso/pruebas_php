@@ -40,7 +40,7 @@ class Libro {
         if (strlen($refLibro) > 3) {
             $this->refLibro = $refLibro;
         } else {
-            echo '<p> Longitud no válida <p>';
+            echo "<p>Longitud no válida<p>";
         }
     }
     
@@ -53,24 +53,24 @@ class Libro {
     }
 
     public function printTitulo() {
-        echo 'El título del libro', $this->titulo, '<br>';
+        echo "El título del libro", $this->titulo, "<br>";
     }
 
     public function printAutor() {
-        echo 'El autor del libro es ', $this->autor, '<br>';
+        echo "El autor del libro: ", $this->autor, "<br>";
     }
 
     public function printLibro() {
-        echo 'El autor del libro es ', $this->autor, '<br>';
-        echo 'El título del libro ', $this->titulo, '<br>';
-        echo 'El número de páginas es ', $this->paginas, '<br>';
+        echo "El autor del libro: ", $this->autor, "<br>";
+        echo "El título del libro ", $this->titulo, "<br>";
+        echo "El número de páginas es ", $this->paginas, "<br>";
         if (strlen($this->refLibro) > 0) {
-            echo 'La referencia del libro es ', $this->refLibro , '<br>';
+            echo "La referencia del libro es ", $this->refLibro , "<br>";
         }
-        echo 'El libro fue prestado ', $this->prestado ,' veces <br>';
+        echo "El libro fue prestado ", $this->prestado ," veces <br>";
         
         if ($this->contieneCD){
-            echo 'El libro contiene CD';
+            echo "El libro contiene CD";
         }
     }
 
@@ -78,18 +78,19 @@ class Libro {
 
 
 
-$libro1 = new Libro('Mila', 'Vais a suspender', 100, '',0);
+$libro1 = new Libro("Pablo", "Programando php", 30, "", 0, false);
 
 print $libro1->getAutor();
 print $libro1->getTitulo();
 print $libro1->getPaginas();
-echo '<br>';
-//$libro1->setRefLibro(5522);
+echo "<br>";
+
+$libro1->printLibro();
 $libro1->setPrestado();
 $libro1->printLibro();
 
 
-$libro2 = new Libro('Javi', 'Viendo la luz', 150, '',0);
+$libro2 = new Libro("Hugo", "Aprendiendo github", 50, "", 0, false);
 $libro2->printLibro();
 
-print 'El número de libros que hay es '. Libro::$numLibros;
+print "El número de libros que hay es ". Libro::$numLibros;
