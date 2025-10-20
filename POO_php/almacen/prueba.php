@@ -27,7 +27,7 @@ echo "<b>Precio total de estantería 0:</b> " . $almacen->calcularPrecioEstanter
 
 $almacen->eliminarProducto(3); // un cambio
 
-echo "<hr><b>📊 Después de eliminar la Coca-Cola:</b><br>"; //volvemos a enseñar
+echo "<hr><b>Después de eliminar la Coca-Cola:</b><br>"; //volvemos a enseñar
 $almacen->mostrarInformacion();
 $almacen->mostrarMatriz();
 ?>
