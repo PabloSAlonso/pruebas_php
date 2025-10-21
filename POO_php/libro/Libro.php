@@ -11,7 +11,6 @@ class Libro {
     private static $referencia=1;
     public static $numLibros=0;
     
-    const LIBRO=1;
 
     public function __construct($autor, $titulo, $paginas, $refLibro, $prestado) {
         $this->autor = $autor;

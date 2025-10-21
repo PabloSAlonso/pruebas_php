@@ -2,31 +2,36 @@
 
 require_once "bebida.php";
 
-class Refresco extends Bebida{
+class Refresco extends Bebida
+{
     private $azucar;
     private $promocion;
 
     public function __construct($id, $litros, $precio, $marca, $azucar, $promocion)
     {
-        parent :: __construct($id, $litros, $precio, $marca);
-        $this -> azucar = $azucar;
-        $this -> promocion =  $promocion;
+        parent::__construct($id, $litros, $precio, $marca);
+        $this->azucar = $azucar;
+        $this->promocion =  $promocion;
     }
 
-    public function getAzucar(){
+    public function getAzucar()
+    {
         return $this->azucar;
     }
 
-    public function getPromocion(){
+    public function getPromocion()
+    {
         return $this->promocion;
     }
 
-    public function setAzucar($azucar){
-        $this -> azucar = $azucar;
+    public function setAzucar($azucar)
+    {
+        $this->azucar = $azucar;
     }
 
-    public function setPromocion($promocion){
-        $this -> promocion = $promocion;
+    public function setPromocion($promocion)
+    {
+        $this->promocion = $promocion;
     }
 
     public function calcularPrecio()
@@ -37,6 +42,10 @@ class Refresco extends Bebida{
     public function mostrarDatos()
     {
         parent::mostrarDatos();
-        echo  "Porcentaje de Azucar: {$this->azucar}, Promoción del 10%: {$this->promocion} ";
+        if ($this->promocion) {
+            echo  "Porcentaje de Azucar: {$this->azucar}, Promocion del 10% activa.<br>";
+        } else {
+            echo  "Porcentaje de Azucar: {$this->azucar}, Promocion del 10% no activa.<br>";
+        }
     }
 }
