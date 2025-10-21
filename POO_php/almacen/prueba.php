@@ -30,4 +30,8 @@ $almacen->eliminarProducto(3); // un cambio
 echo "<hr><b>Después de eliminar la Coca-Cola:</b><br>"; //volvemos a enseñar
 $almacen->mostrarInformacion();
 $almacen->mostrarMatriz();
+
+echo "<hr><b>Precio total del almacén:</b> " . $almacen->calcularPrecioTotal() . " €<br>";
+echo "<b>Precio total de Coca-Cola:</b> " . $almacen->calcularPrecioMarca("Coca-Cola") . " €<br>";
+echo "<b>Precio total de estantería 0:</b> " . $almacen->calcularPrecioEstanteria(0) . " €<br>";
 ?>
