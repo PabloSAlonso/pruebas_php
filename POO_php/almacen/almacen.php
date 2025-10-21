@@ -89,7 +89,7 @@ class Almacen {
         foreach ($this->estanterias as $fila) {
             foreach ($fila as $bebida) {
                 if ($bebida !== null) {
-                    $bebida->mostrarInfo();
+                    $bebida->mostrarDatos();
                 }
             }
         }

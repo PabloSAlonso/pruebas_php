@@ -1,7 +1,7 @@
 <?php
-require_once "AguaMineral.php";
-require_once "BebidaAzucarada.php";
-require_once "Almacen.php";
+require_once "agua.php";
+require_once "refresco.php";
+require_once "almacen.php";
 
 $almacen = new Almacen(2, 3);
 
