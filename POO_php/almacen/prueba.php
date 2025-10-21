@@ -14,7 +14,7 @@ $colaZero = new Refresco(5, 1.5, 2.00, "Coca-Cola", 0, false);
 
 $almacen->agregarProducto($agua1);
 $almacen->agregarProducto($agua2);
-$almacen->agregarProducto($cola); // metemos bebidas 
+$almacen->agregarProducto($cola); // metemos bebidas en matriz
 $almacen->agregarProducto($fanta);
 $almacen->agregarProducto($colaZero);
 

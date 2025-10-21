@@ -26,7 +26,7 @@ class Almacen {
             for ($j = 0; $j < $this->columnas; $j++) {
                 if ($this->estanterias[$i][$j] === null) {
                     $this->estanterias[$i][$j] = $bebida;
-                    echo "Bebida ID {$bebida->getId()} agregada en posición [$i][$j]<br>";
+                    echo "Bebida con ID {$bebida->getId()} agregada en la posición [$i][$j]<br>";
                     return;
                 }
             }
@@ -112,7 +112,7 @@ class Almacen {
                 if ($bebida !== null) {
                     echo "<td>ID: {$bebida->getId()}<br>({$bebida->getMarca()})</td>";
                 } else {
-                    echo "<td style='color: #aaa;'>– vacío –</td>";
+                    echo "<td style='color: #555353ff;'>- vacío -</td>";
                 }
             }
             echo "</tr>";

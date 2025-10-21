@@ -37,6 +37,6 @@ class Refresco extends Bebida{
     public function mostrarDatos()
     {
         parent::mostrarDatos();
-        echo  "Porcentaje de Azucar: {$this->azucar}, Promoción del 10%: {$this->promocion}";
+        echo  "Porcentaje de Azucar: {$this->azucar}, Promoción del 10%: {$this->promocion} ";
     }
 }

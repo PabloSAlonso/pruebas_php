@@ -53,7 +53,7 @@ class Libro {
     }
 
     public function printTitulo() {
-        echo "El título del libro", $this->titulo, "<br>";
+        echo "El título del libro: ", $this->titulo, "<br>";
     }
 
     public function printAutor() {
@@ -62,12 +62,12 @@ class Libro {
 
     public function printLibro() {
         echo "El autor del libro: ", $this->autor, "<br>";
-        echo "El título del libro ", $this->titulo, "<br>";
-        echo "El número de páginas es ", $this->paginas, "<br>";
+        echo "El título del libro: ", $this->titulo, "<br>";
+        echo "El número de páginas: ", $this->paginas, "<br>";
         if (strlen($this->refLibro) > 0) {
-            echo "La referencia del libro es ", $this->refLibro , "<br>";
+            echo "La referencia del libro es:", $this->refLibro , "<br>";
         }
-        echo "El libro fue prestado ", $this->prestado ," veces <br>";
+        echo "El libro fue prestado: ", $this->prestado ," veces <br>";
         
         if ($this->contieneCD){
             echo "El libro contiene CD";
@@ -78,7 +78,7 @@ class Libro {
 
 
 
-$libro1 = new Libro("Pablo", "Programando php", 30, "", 0, false);
+$libro1 = new Libro("Pablo ", "Programando php ", 30, "", 0, false);
 
 print $libro1->getAutor();
 print $libro1->getTitulo();
@@ -90,7 +90,7 @@ $libro1->setPrestado();
 $libro1->printLibro();
 
 
-$libro2 = new Libro("Hugo", "Aprendiendo github", 50, "", 0, false);
+$libro2 = new Libro("Hugo ", "Aprendiendo github ", 50, "", 0, false);
 $libro2->printLibro();
 
-print "El número de libros que hay es ". Libro::$numLibros;
+print "El número de libros que hay: ". Libro::$numLibros;
