@@ -5,20 +5,17 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Formulario inscripcion empleado</title>
-    <style>
-        .formulario {
-            padding: 10px;
-            font-size: larger;
-            font-style: italic;
-            font-family: 'Courier New', Courier, monospace;
-        }
-    </style>
+    <?php
+
+    if (isset($_POST['nombre']) && $_POST['nombre'] != "" && (isset($_POST['apellidos'])) && ($_POST['apellidos'] != '') && isset($_POST['telefono']) && ($_POST['telefono'] != '') && isset($_POST['departamento']) && ($_POST['departamento'] != ''))
+
+    ?>
 </head>
 
 <body>
     <h1>Formulario de inscripcion</h1>
     <div id=formulario>
-        <form action="<?php echo $_SERVER['PHP_SELF']?>" method="post" class="formulario">
+        <form action="<?php echo $_SERVER['PHP_SELF'] ?>" method="post" class="formulario">
             <table>
                 <tr>
                     <td>Nombre:</td>
@@ -39,7 +36,7 @@
                 <tr>
                     <td colspan="2"><input type="submit" value="Crear empleado"></td>
                 </tr>
-            </table>   
+            </table>
         </form>
     </div>
     <a href="controladores/controlador.php">Listar Empleados</a>
