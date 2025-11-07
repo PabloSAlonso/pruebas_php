@@ -17,4 +17,21 @@ class Empleado {
         $this->db = null;
         return $result;
     }
+
+    public function getEmpleado(){
+        $sql = "SELECT * FROM empleados";
+        $result = $this->db->query($sql);
+        $this->empleado = $result->fetchAll(PDO::FETCH_ASSOC);
+        $this->db = null;
+        return $this->empleado;
+    }
+
+    public function editarEmpleado($id){
+        $sql = "SELECT nombre, apellidos, telefono, departamento From empleados WHERE id={$id}";
+        $result = $this -> db -> query($sql);
+        $dato = $result -> fetchAll(PDO::FETCH_ASSOC);
+        $this -> db = null;
+        return $dato;
+
+    }
 }
