@@ -40,7 +40,7 @@ class Empleado
 
     public function actualizarEmpleado($id)
     {
-        $sql = "UPDATE empleados SET nombre = {$_POST['nombre']} apellidos = {$_POST['apellidos']} telefono = {$_POST['telefono']} departamento = {$_POST['departamento']}";
+        $sql = "UPDATE empleados SET nombre = {$_POST['nombre']}, apellidos = {$_POST['apellidos']}, telefono = {$_POST['telefono']}, departamento = {$_POST['departamento']} WHERE id={$id} LIMIT 1";
         $result = $this->db->query($sql);
         $this->db = null;
         return $result;

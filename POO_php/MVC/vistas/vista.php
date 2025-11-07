@@ -35,7 +35,6 @@
                 <td><?php echo $result[$i]['departamento'] ?></td>
                 <td><?php echo "<a href=\"../controladores/controlador_editar.php?id={$result[$i]['id']}\">Editar</a>" ?></td>
                 <td><?php echo "<a href=\"../controladores/controlador_borrar.php?id={$result[$i]['id']}\">Borrar</a>" ?></td>
-                <td><?php echo "<a href=\"../controladores/controlador_actualizar.php?id={$result[$i]['id']}\">Actualizar</a>" ?></td>
 
             </tr>
         <?php } ?>
