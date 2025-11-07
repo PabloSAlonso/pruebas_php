@@ -7,8 +7,10 @@
 
         if ($flag){
             echo "Empleado Borrado Correctamente";
+            echo "<br><a href= ../index.php>Volver</a>";
         } else {
             echo "No se ha encontrado un empleado con ese id";
+            echo "<br><a href=../index.php>Volver</a>";
         }   
     }
 ?>
