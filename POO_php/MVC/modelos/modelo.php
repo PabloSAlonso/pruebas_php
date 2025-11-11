@@ -37,13 +37,12 @@ class Empleado
         return $dato;
     }
 
-    public function actualizarEmpleado($id)
+    public function actualizarEmpleado($id, $nombre, $apellidos, $telefono, $departamento)
     {
-        $sql = "UPDATE empleados SET nombre = {$_POST['nombre']}, apellidos = {$_POST['apellidos']}, telefono = {$_POST['telefono']}, departamento = {$_POST['departamento']} WHERE id={$id} LIMIT 1";
+        $sql = "UPDATE empleados SET nombre = '$nombre', apellidos = '$apellidos', telefono = '$telefono', departamento = '$departamento' WHERE id='{$id}'";
         $result = $this->db->query($sql);
-        $dato = $result->fetchAll(PDO::FETCH_ASSOC);
         $this->db = null;
-        return $dato;
+        return $result;
     }
 
     public function borrarEmpleado($id)
