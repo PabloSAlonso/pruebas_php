@@ -16,7 +16,6 @@
         <input type="text" name="departamento" id="departamento" value="<?php echo $dato[0]['departamento'] ?>">
         <input type="hidden" name="id" value="<?php $_GET['id']?>">
         <input type="submit" name="actualizar" id="actualizar" value="Actualizar">
-
     </form> 
 </body>
 </html>

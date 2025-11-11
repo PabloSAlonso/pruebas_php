@@ -5,6 +5,10 @@
         require_once '../vistas/vista_editar.php';
 
         $empleado = new Empleado();
+        $empleado -> actualizarEmpleado($_GET['id']);
+
+        echo "Empleado actualizado correctamente";
+        echo "<br><a href=../index.php>Volver</a>";
         
         
     }
