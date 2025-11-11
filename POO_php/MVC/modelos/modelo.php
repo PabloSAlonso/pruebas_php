@@ -2,7 +2,6 @@
 
 class Empleado
 {
-
     private $empleado;
     private $db;
 
@@ -42,8 +41,9 @@ class Empleado
     {
         $sql = "UPDATE empleados SET nombre = {$_POST['nombre']}, apellidos = {$_POST['apellidos']}, telefono = {$_POST['telefono']}, departamento = {$_POST['departamento']} WHERE id={$id} LIMIT 1";
         $result = $this->db->query($sql);
+        $dato = $result->fetchAll(PDO::FETCH_ASSOC);
         $this->db = null;
-        return $result;
+        return $dato;
     }
 
     public function borrarEmpleado($id)
