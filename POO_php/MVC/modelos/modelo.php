@@ -11,9 +11,9 @@ class Empleado
         $this->db = new PDO("mysql:host=localhost;dbname=ejemplo_mvc;charset=utf8", "root", "");
     }
 
-    public function setEmpleado($nombre, $apellidos, $telefono, $departamento)
+    public function setEmpleado($nombre, $apellidos, $telefono, $departamento, $imagen)
     {
-        $sql = "INSERT INTO empleados(nombre,apellidos,telefono,departamento) VALUES('$nombre','$apellidos','$telefono','$departamento')"; //devuelve true si se ejecuta bien
+        $sql = "INSERT INTO empleados(nombre,apellidos,telefono,departamento, imagen) VALUES('$nombre','$apellidos','$telefono','$departamento', '$imagen')"; //devuelve true si se ejecuta bien
         $result = $this->db->query($sql);
         $this->db = null;
         return $result;
@@ -30,16 +30,16 @@ class Empleado
 
     public function editarEmpleado($id)
     {
-        $sql = "SELECT nombre, apellidos, telefono, departamento From empleados WHERE id={$id}";
+        $sql = "SELECT nombre, apellidos, telefono, departamento, imagen From empleados WHERE id={$id}";
         $result = $this->db->query($sql);
         $dato = $result->fetchAll(PDO::FETCH_ASSOC);
         $this->db = null;
         return $dato;
     }
 
-    public function actualizarEmpleado($id, $nombre, $apellidos, $telefono, $departamento)
+    public function actualizarEmpleado($id, $nombre, $apellidos, $telefono, $departamento, $imagen)
     {
-        $sql = "UPDATE empleados SET nombre = '$nombre', apellidos = '$apellidos', telefono = '$telefono', departamento = '$departamento' WHERE id='{$id}'";
+        $sql = "UPDATE empleados SET nombre = '$nombre', apellidos = '$apellidos', telefono = '$telefono', departamento = '$departamento', imagen = '$imagen' WHERE id='{$id}'";
         $result = $this->db->query($sql);
         $this->db = null;
         return $result;

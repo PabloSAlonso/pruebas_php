@@ -4,7 +4,7 @@ if (isset($_POST['nombre']) && $_POST['nombre'] != "" && (isset($_POST['apellido
         //llamada al modelo
         require_once '../modelos/modelo.php';
         $empleado = new Empleado();
-        $result = $empleado->actualizarEmpleado($_POST['id'], $_POST['nombre'], $_POST['apellidos'],$_POST['telefono'], $_POST['departamento']);
+        $result = $empleado->actualizarEmpleado($_POST['id'], $_POST['nombre'], $_POST['apellidos'],$_POST['telefono'], $_POST['departamento'], $_POST['imagen']);
         if ($result) {
             echo "<p style=\"color:green;\">El usuario se ha actualizado correctamente</p>";
         } else {
@@ -12,15 +12,5 @@ if (isset($_POST['nombre']) && $_POST['nombre'] != "" && (isset($_POST['apellido
         }
         echo "<br> <a href=../index.php</a>";
     }
-    // require_once '../modelos/modelo.php';
-
-
-//     $empleado = new Empleado();
-//     $empleado->actualizarEmpleado($_GET['id']);
-
-//     require_once '../vistas/vista_editar.php';
     
-
-// echo "Empleado actualizado correctamente";
-// echo "<br><a href=../index.php>Volver</a>";
 ?>
