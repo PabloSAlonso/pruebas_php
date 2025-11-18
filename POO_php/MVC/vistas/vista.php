@@ -24,6 +24,7 @@
             <th>Apellidos</th>
             <th>Telefono</th>
             <th>Departamento</th>
+            <th>Foto</th>
         </tr>
         <?php
         for ($i = 0; $i < count($result); $i++) {
@@ -33,6 +34,7 @@
                 <td><?php echo $result[$i]['apellidos'] ?></td>
                 <td><?php echo $result[$i]['telefono'] ?></td>
                 <td><?php echo $result[$i]['departamento'] ?></td>
+                <td><img src="../<?php echo $result[$i]['imagen']?>" alt="foto" style="width: 90px;height:auto;"></td>
                 <td><?php echo "<a href=\"../controladores/controlador_editar.php?id={$result[$i]['id']}\">Editar</a>" ?></td>
                 <td><?php echo "<a href=\"../controladores/controlador_borrar.php?id={$result[$i]['id']}\">Borrar</a>" ?></td>
 

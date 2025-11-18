@@ -9,11 +9,11 @@
 
     if (isset($_POST['nombre']) && $_POST['nombre'] != "" && (isset($_POST['apellidos'])) && ($_POST['apellidos'] != '') && isset($_POST['telefono']) && ($_POST['telefono'] != '') && isset($_POST['departamento']) && ($_POST['departamento'] != '')) {
         //llamada al modelo
+        require_once 'modelos/modelo.php';
         $directorio = "img/";
-            $nombre_imagen = basename($_FILES['imagen']['name']);
+        $nombre_imagen = basename($_FILES['imagen']['name']);
         $rutafinal = $directorio . $nombre_imagen;
         if (move_uploaded_file($_FILES['imagen']['tmp_name'], $rutafinal)) {
-            require_once 'modelos/modelo.php';
             $empleado = new Empleado();
             $result = $empleado->setEmpleado($_POST['nombre'], $_POST['apellidos'], $_POST['telefono'], $_POST['departamento'], $_POST['imagen']);
             if ($result) {
