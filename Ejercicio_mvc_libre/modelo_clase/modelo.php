@@ -16,7 +16,11 @@ class Player {
     }
 
     public function getPlayer(){
-        
+        $sql = "SELECT * FROM plantilla_lakers";
+        $result=$this->db->query($sql);
+        $this->player = $result->fetchAll(PDO::FETCH_ASSOC);
+        $this->db = null;
+        return $this->player;
     }
 
 }
