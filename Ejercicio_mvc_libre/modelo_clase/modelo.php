@@ -31,7 +31,7 @@ class Player
     }
 
     public function updatePlayer($name, $age, $nation, $teams, $allstar, $mvp, $image, $id) {
-        $sql = "UPDATE plantilla_lakers SET player_name = '$name', player_age = $age, player_nationality = '$nation', player_teams = $teams, player_allstar = $allstar, player_mvp = $mvp, player_image = $image WHERE id = $id";
+        $sql = "UPDATE plantilla_lakers SET player_name = '$name', player_age = $age, player_nationality = '$nation', player_teams = $teams, player_allstar = $allstar, player_mvp = $mvp, player_image = '$image' WHERE id = $id";
     }
 
     public function deletePlayer($id) {
