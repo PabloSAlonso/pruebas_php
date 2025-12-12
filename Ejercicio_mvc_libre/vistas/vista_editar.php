@@ -6,6 +6,10 @@
     <title>Editing Players</title>
 </head>
 <body>
-    
+    <h1>Insert the new Stats</h1>
+
+    <form action="../controladores/controlador_actualizar.php" method="post">
+        
+    </form>
 </body>
 </html>
