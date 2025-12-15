@@ -9,7 +9,6 @@
     <h1>Edicion de datos</h1>
 
     <form action="../controladores/controlador_actualizar.php" method="post">
-
         <input type="text" name="nombre" id="nombre" value="<?php echo $dato[0]['nombre'] ?>">
         <br>
         <input type="text" name="apellidos" id="apellidos" value="<?php echo $dato[0]['apellidos'] ?>">
