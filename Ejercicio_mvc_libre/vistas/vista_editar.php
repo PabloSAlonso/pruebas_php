@@ -118,7 +118,7 @@
         <br>
         <img src="../<?php echo "$result[$i]['imagen']" ?>" alt="foto" style="width: 90px;height:auto;">
         <br>
-        <input type="submit" name="actualizar" id="actualizar" value="Actualizar">
+        <input type="submit" name="actualizar" id="actualizar" value="Update">
         <br>
     </form>
 </body>
