@@ -113,8 +113,8 @@
                 <td><?php echo $result[$i]['player_allstar'] ?></td>
                 <td><?php echo $result[$i]['player_mvp'] ?></td>
                 <td><img src='../<?php echo $result[$i]['player_image'] ?>' alt="foto" style="width:auto;height:auto;"></td>
-                <td><?php echo "<a href='../controladores/controlador_editar.php?id={$result[$i]['id']}'>Actualizar</a>" ?></td>
-                <td><?php echo "<a href='../controladores/controlador_borrar.php?id={$result[$i]['id']}'>Borrar</a>" ?></td>
+                <td><?php echo "<a href='../controladores/controlador_editar.php?id={$result[$i]['id']}'>Update</a>" ?></td>
+                <td><?php echo "<a href='../controladores/controlador_borrar.php?id={$result[$i]['id']}'>Delete</a>" ?></td>
             </tr>
         <?php } ?>
     </table>
