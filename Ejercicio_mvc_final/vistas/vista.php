@@ -80,18 +80,17 @@
     </style>
 </head>
 <body>
-<h1>Listado de equipos</h1>
+<h1>Listado de Jugadores</h1>
 <table>
     <tr>
         <th>ID</th>
         <th>Nombre</th>
-        <th>Año creación</th>
+        <th>Edad</th>
         <th>Títulos</th>
         <th>Logo</th>
-        <th>Acciones</th>
     </tr>
-    <?php if ($equipos): ?>
-        <?php foreach ($equipos as $e): ?>
+    <?php if ($jugadores): ?>
+        <?php foreach ($jugadores as $e): ?>
             <tr>
                 <td><?= $e['id'] ?></td>
                 <td><?= $e['nombre'] ?></td>
@@ -106,7 +105,7 @@
         <?php endforeach; ?>
     <?php else: ?>
         <tr>
-            <td colspan="6">No hay equipos</td>
+            <td colspan="6">No hay Jugadores</td>
         </tr>
     <?php endif; ?>
 </table>
