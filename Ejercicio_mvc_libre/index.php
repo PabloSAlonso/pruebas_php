@@ -160,7 +160,7 @@
                 <!-- Botón de enlace a la lista -->
                 <tr>
                     <td colspan="2">
-                        <a class="btn_return" href="vistas/vista.php">Go to Players List</a>
+                        <a class="btn_return" href="controladores/controlador_inicial.php">Go to Players List</a>
                     </td>
                 </tr>
             </table>

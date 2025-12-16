@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -86,6 +87,7 @@
         }
     </style>
 </head>
+
 <body>
     <h1>Listado </h1>
     <table>
@@ -100,24 +102,25 @@
             <th>Player Image</th>
         </tr>
         <?php
-            for($i=0;$i<count($result);$i++){
+        for ($i = 0; $i < count($result); $i++) {
         ?>
-        <tr>
-            <td><?php echo $result[$i]['player_name'] ?></td>
-            <td><?php echo $result[$i]['player_age'] ?></td>
-            <td><?php echo $result[$i]['player_nationality'] ?></td>
-            <td><?php echo $result[$i]['player_experience'] ?></td>
-            <td><?php echo $result[$i]['player_teams'] ?></td>
-            <td><?php echo $result[$i]['player_allstar'] ?></td>
-            <td><?php echo $result[$i]['player_mvp'] ?></td>
-            <td><img src="../<?php echo $result[$i]['player_image'] ?>" alt="foto" style="width:auto;height:auto;"></td>
-            <td><?php echo "<a href=\"../controladores/controlador_editar.php?id={$result[$i]['id']}\">Actualizar</a>"?></td>
-            <td><?php echo "<a href=\"../controladores/controlador_borrar.php?id={$result[$i]['id']}\">Borrar</a>"?></td>                
-        </tr>
+            <tr>
+                <td><?php echo $result[$i]['player_name'] ?></td>
+                <td><?php echo $result[$i]['player_age'] ?></td>
+                <td><?php echo $result[$i]['player_nationality'] ?></td>
+                <td><?php echo $result[$i]['player_experience'] ?></td>
+                <td><?php echo $result[$i]['player_teams'] ?></td>
+                <td><?php echo $result[$i]['player_allstar'] ?></td>
+                <td><?php echo $result[$i]['player_mvp'] ?></td>
+                <td><img src="../<?php echo $result[$i]['player_image'] ?>" alt="foto" style="width:auto;height:auto;"></td>
+                <td><?php echo "<a href='../controladores/controlador_editar.php?id={$result[$i]['id']}'>Actualizar</a>" ?></td>
+                <td><?php echo "<a href='../controladores/controlador_borrar.php?id={$result[$i]['id']}'>Borrar</a>" ?></td>
+            </tr>
         <?php } ?>
     </table>
     <br>
     <a href="../index.php">Return to the Principal Page</a>
 
 </body>
+
 </html>
