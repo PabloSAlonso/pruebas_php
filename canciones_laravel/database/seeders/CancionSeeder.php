@@ -19,7 +19,8 @@ class CancionSeeder extends Seeder
             'titulo' => 'OK',
             'album' => 'Zeit',
             'grupo' => 'Rammstein',
-            'anio' => '2021'
+            'anio' => '2021',
+            // 'created_at' => now()
         ]);
         DB::table('cancions')->insert([
             'titulo' => 'NO',
