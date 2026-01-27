@@ -24,5 +24,6 @@ Route::view('/agregar','nueva_cancion')->name('formAgregar');
 Route::post('/agregar', [CancionController::class,'agregarCancion'])->name('agregarCancion');
 Route::get('/eliminar/{id}', [CancionController::class, 'eliminarCancion'] )->name('eliminarCancion');
 Route::get('/editar/{id}', [CancionController::class,'editarCancion'])->name('editarCancion');
+Route::post('/actualizar',[CancionController::class,'actualizarCancion'])->name('actualizarCancion');
 
 
